@@ -201,7 +201,7 @@ margin-left: 6%;
   flex-direction: row;
   align-items: center;
 
-  height: 200px;
+  
 
   width: 100%;
 
@@ -219,6 +219,7 @@ margin-left: 6%;
 .mail {
 font-size: 18px;
   font-family: 'Dosis', sans-serif;
+      margin-left: -40px;
 }
 .mail h2 {
   margin-top: 0;
