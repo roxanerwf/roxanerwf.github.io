@@ -1,0 +1,260 @@
+body {
+/**/
+  background-attachment:fixed;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("images/univers.jpg") fixed no-repeat;
+  background-size: cover;
+  margin: 0;
+  background-blend-mode: soft-light;
+  background-color: #333;
+color: #fff;
+
+}
+
+a
+{
+	text-decoration:none;
+  color: #fff;
+}
+
+
+.container {
+ display:flex;
+ flex-direction: column;
+ text-align: center;
+ color: #fff;
+ width: 100%;
+ align-items: center;
+
+}
+
+
+
+.nav {
+  width: 100%;
+  height: 7%;
+  color: black;
+
+
+
+}
+.nav li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+	display:inline-block;
+	margin: 0 30px;
+  padding-left: 70px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+.nom {
+  width: 100%; ;
+  height: 320px;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 5%;
+font-family: 'Dosis', sans-serif;
+
+}
+
+.nom h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+}
+.nom p {
+ padding-top: 8%;
+ font-family: 'Dosis', sans-serif;
+}
+.moi {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+.parcours {
+  text-align: center;
+  height: 600px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+
+}
+
+.parcours h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+}
+
+.grosBlock {
+ display: flex;
+ width: 100%;
+
+}
+
+.block1 {
+ flex-direction: column;
+  width: 50%;
+  margin-left: 17%;
+}
+
+.partie1{
+  width: 100%;
+margin-top: 6%;
+}
+
+.partie1 img {
+  width: 40%;
+  height: 100%;
+}
+.partie2 {
+  width: 100%;
+  text-align: justify;
+  margin-top: 10%;
+ font-family: 'Indie Flower', cursive;
+}
+.block2 {
+   margin-left: 5%;
+ flex-direction: column;
+  width: 50%;
+}
+.partie3 {
+  width: 70%;
+  text-align: justify;
+  font-family: 'Indie Flower', cursive;
+}
+
+.partie4 {
+  width: 50%;
+
+}
+.partie4 img {
+  width: 90%;
+  margin-left: 15%;
+  margin-top: 8%;
+}
+
+
+
+.projet{
+  height: 400px;
+  width: 100%;
+margin-right: 5%;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+.projet h2 {
+  margin-bottom: 4%;
+  margin-left: 9%;
+}
+
+.projet img {
+   margin-left: 5%;
+}
+.donuts {
+  width: 16%;
+  height: 70%;
+}
+
+.integration4 {
+  width: 16%;
+  height: 70%;
+}
+
+.integration5 {
+  width: 16%;
+  height: 70%;
+
+}
+
+.competence{
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  width: 100%;
+  text-align: center;
+}
+.competence h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 29px;
+}
+
+.ligne1{
+margin-left: 6%;
+}
+
+.ligne2 {
+  margin-left: 6%;
+}
+
+.ligne1 img {
+  height: 75%;
+  width: 7%;
+  margin: 2% 6% 0 0;
+}
+
+.ligne2 img {
+   height: 75%;
+  width: 7%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 200px;
+
+  width: 100%;
+
+}
+.git {
+  width: 55%;
+}
+
+.git img{
+  height: 80%;
+  width: 80%;
+  margin-left: 50%;
+}
+
+.mail {
+font-size: 18px;
+  font-family: 'Dosis', sans-serif;
+  margin-left: 18%;
+}
+.mail h2 {
+  margin-top: 0;
+  margin-bottom: 1%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.twitter {
+  height: 40%;
+  width: 30%;
+}
+
+.twitter img {
+  height: 80%;
+}
+
+.linkedin {
+
+  width: 50%;
+  text-align: center;
+
+}
+.linkedin img{
+   height: 50%;
+  width: 17%;
+ margin-right: 80%;
+
+}
