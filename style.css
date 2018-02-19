@@ -157,21 +157,11 @@ margin-right: 5%;
 .projet img {
    margin-left: 5%;
 }
-.donuts {
+.donuts, .husky, .onemillion {
   width: 16%;
   height: 70%;
 }
 
-.integration4 {
-  width: 16%;
-  height: 70%;
-}
-
-.integration5 {
-  width: 16%;
-  height: 70%;
-
-}
 
 .competence{
   display: flex;
