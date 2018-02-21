@@ -1,106 +1,305 @@
 <!DOCTYPE html>
 <html>
+<title>Roxane Prestat</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
 
-  <head>
+/* Effet Parallax */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    <title>Roxane Prestat</title>
-      <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">  <!-- /* pour le nom et preom*/ -->
-   <link href="https://fonts.googleapis.com/css?family=Dosis|Indie+Flower" rel="stylesheet">  <!--/* pour le texte de la page*/ -->
-  <link href="https://fonts.googleapis.com/css?family=Dosis|Indie+Flower|Josefin+Sans" rel="stylesheet">  <!--/* pour les titre de page*/ -->
+/* 1ere image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('images/parallax1.jpg');
+    min-height: 100%;
+}
 
-  </head>
-  <body>
+/* 2e image (Portfolio) */
+.bgimg-2 {
+    background-image: url("images/parallax2.jpg");
+    min-height: 400px;
+}
 
-    <div class="container">
+/* 3e image (Contact) */
+.bgimg-3 {
+    background-image: url("images/parallax3.jpg");
+    min-height: 400px;
+}
 
-      <div class="nav">
+.wide {letter-spacing: 10px;}
+.hover-opacity {cursor: pointer;}
 
-        <ul>
+/* Enlever le defilement parallax pour les tablettes et smartphones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
 
-          <li><a href = "#ancreParcours">A Propos</a></li>
-          <li><a href = "#ancreProjets">Projet Web</a></li>
-          <li><a href = "#ancreCompetences">Competences</a></li>
-          <li><a href = "#ancreContact">Contact</a></li>
-        </ul>
-  <!-- En-tête du site -->
-      </div>
-      <div class="nom">
-        <h2>Roxane Prestat</h2>
+<!-- Navbar (départ) -->
+<div class="top">
+  <div class="bar" id="myNavbar">
+    <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#accueil" class="bar-item button js-scrollTo">Accueil</a>
+    <a href="#apropos" class="bar-item button hide-small js-scrollTo"><i class="fa fa-user"></i> A propos</a>
+    <a href="#portfolio" class="bar-item button hide-small js-scrollTo"><i class="fa fa-th"></i> Portfolio</a>
+    <a href="#contact" class="bar-item button hide-small js-scrollTo"><i class="fa fa-envelope"></i> Contact</a>
+  </div>
 
-        <p>Apprenante développeur web</p>
+  <!-- Navbar sur petits écrans -->
+  <div id="navDemo" class="bar-block white hide hide-large hide-medium">
+    <a href="#apropos" class="bar-item button js-scrollTo" onclick="toggleFunction()">A propos</a>
+    <a href="#portfolio" class="bar-item button js-scrollTo" onclick="toggleFunction()">Portfolio</a>
+    <a href="#contact" class="bar-item button js-scrollTo" onclick="toggleFunction()">Contact</a>
+  </div>
+</div>
 
-      </div>
+<!-- 1ere image Parallax avec le texte/logo -->
+<div class="bgimg-1 display-container opacity-middle" id="accueil">
+  <div class="display-middle" style="white-space:nowrap;">
+    <span class="center padding-large xlarge  animate-opacity" style="color:white;"><span class="hide-small">Roxane PRESTAT</span> Future Developpeuse Web</span>
+  </div>
+</div>
 
-      <div class="parcours">
-        <h2 id="ancreParcours">A Propos</h2>
-        <div class="grosBlock">
-        <div class="block1">
-        <div class="partie1">
-        <img src="images/imageproxy.gif">
-      </div>
-      <div class="partie2">
-
-        <p>N'ayant pas pu finir le lycée j'ai opté pour une voie en tant qu'assistante vétérinaire. Cependant ce métier n'offrait pas les conditions qui me convenaient. J'ai donc du renoncer et j'ai commencé une longue errance dans le but de chercher dans quel métier je suis faite pour bosser !
-      </p>
-      </div>
+<!-- Container (Section A propos) -->
+<div class="content container padding-64" id="apropos">
+  <a class="js-scrollTo" href="#accueil" style="font-size:200%;position:fixed;top:90%;left:97%;"><i class="fa fa-arrow-up"></i></a>
+  <h3 class="center">A PROPOS DE MOI</h3>
+  <p class="center"><em>La tête dans les étoiles</em></p>
+  <p>J'ai 26 ans et je suis dans le code depuis 4 mois maintenant. J'adore ce que je fais et je suis pressée de parfaire ma maîtrise dans les différents langages et frameworks. En dehors de ça, je suis fan de l'univers Tolkien, adore le Metal Symphonique, et assume mon côté geek qui idôlatre sa PS4. Je me suis toujours demandé quel métier était fait pour moi, j'ai eu une longue errance.. Puis j'ai eu la chance de découvrir la Rural Web Factory grâce à Pôle Emploi et ainsi suivre une formation de developpement web basée sur la méthode Simplon.</p>
+  <div class="row">
+    <div class="col m6 center padding-large">
+      <p><b><i class="fa fa-user margin-right"></i>Roxane Prestat</b></p><br>
+      <img src="images/original.gif" class="round image opacity hover-opacity-off" alt="Wouf!" width="500" height="333">
     </div>
-    <div class="block2">
-      <div class="partie3">
-        <p>
-         Puis de là j'ai eu la chance de découvrir la Rural Web Factory grâce à Pole Emploi et ainsi suivre une formation de developpement web basée sur la méthode Simplon, la Rural Web Factory
-         propose une formation intensive axée
-         sur l'apprentissage "learning by doing" et "learning by teaching", travail en mode projet,
-         et offre une immersion en entreprise grâce à nos partenaires.
-       </p>
-     </div>
-     <div class="partie4">
-       <img src=" images/rwf.png">
-     </div>
-   </div>
-   </div>
-      </div>
 
-      </div>
-      <div class="projet">
-      <h2 id="ancreProjets">Mes Projets</h2>
-      <img src ="images/donuts.png" class="donuts">
-      <img src ="images/million_lines.png" class="million_lines">
-      <img src ="images/audio.png" class="audio">
-
-      </div>
-      <div class="competence">
-          <h2 id="ancreCompetences">En apprentissage...</h2>
-        <div class="ligne1">
-          <img src="images/htmlLogo.png" class="logo">
-          <img src="images/cssLogo.png" class="logo2">
-          <img src="images/jsLogo.png" class="logo3">
-          <img src="images/logo_PHP.png" class="logo3">
-          <img src="images/sql-couleur_03.png" class="logo3">
-        </div>
-        <div class="ligne2">
-          <img src="images/bootstrap_logo.png" class="logo3">
-          <img src="images/jquery-couleur.png" class="logo3">
-          <img src="images/symphony-couleur.png" class="logo3">
-        </div>
-      </div>
-
-      <div class="contacts">
-        <div class="git">
-          <a href="" target="_blank"><img src="images/git.png"></a>
-        </div>
-        <div class="mail">
-          <h2 id="ancreContact">Contactez moi</h2>
-          <p>Roxane Prestat</p>
-          <p>0636982881</p>
-          <p>prestat.roxane@gmail.com</p>
-        </div>
-
-        <div class="linkedin">
-          <a href="" target="_blank"><img src="images/linkedin.png"></a>
-        </div>
-      </div>
+    <!-- Cacher ce texte sur les petits formats -->
+    <div class="col m6 hide-small padding-large">
+      <p>La Rural Web Factory est une école de codage ouverte à tous : elle propose une formation intensive de 6 mois axée sur l'apprentissage "learning by doing" et "learning by teaching", travail en mode projet, et offre une immersion en entreprise grâce à ses partenaires. Depuis le début de ma formation, j'ai acquis un certain nombre de connaissances en terme de développement et de savoir-être au niveau professionnel et personnel. Mon entrée dans le monde du numérique m'a ouvert les yeux et je me suis prise de passion pour le développement informatique. <b>Je suis à la recherche d'une entreprise qui pourrait m'acceuillir pour un stage ces deux prochains mois</b>.</p>
     </div>
-  </body>
+  </div>
+  <p class="large center padding-16">Je suis douée à :</p>
+  <p>HTML5</p>
+  <div class="light-grey">
+    <div class="container padding-small dark-grey center" style="width:90%">90%</div>
+  </div>
+  <p>CSS3</p>
+  <div class="light-grey">
+    <div class="container padding-small dark-grey center" style="width:85%">85%</div>
+  </div>
+  <p>Responsive Design</p>
+  <div class="light-grey">
+    <div class="container padding-small dark-grey center" style="width:75%">75%</div>
+  </div>
+  <p>Bootstrap</p>
+  <div class="light-grey">
+    <div class="container padding-small dark-grey center" style="width:75%">70%</div>
+  </div>
+  <p>PHP</p>
+  <div class="light-grey">
+    <div class="container padding-small dark-grey center" style="width:65%">65%</div>
+  </div>
+  <p>Javascript</p>
+  <div class="light-grey">
+    <div class="container padding-small dark-grey center" style="width:50%">50%</div>
+  </div>
+</div>
+
+<!-- 2e image Parallax avec texte du portfolio -->
+<div class="bgimg-2 display-container opacity-min">
+  <div class="display-middle">
+    <span class="xxlarge text-white wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Section Portfolio) -->
+<div class="content container padding-64" id="portfolio">
+  <h3 class="center">MES PROJETS</h3>
+  <p class="center"><em>Voici quelques uns de mes derniers projets réalisés</em></p><br>
+
+  <!-- Grille Responsive. 4 colonnes sur les tablettes, écrans larges. S'empilera sur les formats mobiles (100% width) -->
+  <div class="row-padding center">
+    <div class="col m3">
+      <img src="images/million_lines.png" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Projet million lines">
+    </div>
+
+    <div class="col m3">
+      <img src="images/donuts.png" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Vegan Donut Shoppe">
+    </div>
+
+    <div class="col m3">
+      <img src="images/adoptehusky.png" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Adopte un Husky">
+    </div>
+
+    <div class="col m3">
+      <img src="images/audio.png" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Projet Audio">
+    </div>
+  </div>
+
+<!--  <div class="row-padding center section">
+    <div class="col m3">
+      <img src="/images/p5.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="The mist">
+    </div>
+
+    <div class="col m3">
+      <img src="/images/p6.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="col m3">
+      <img src="/images/p7.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="col m3">
+      <img src="/images/p8.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Sailing">
+    </div>
+    <button class="button padding-large light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+-->
+</div>
+
+
+<!-- Modal pour images en taille réelle au clic -->
+<div id="modal01" class="modal black" onclick="this.style.display='none'">
+  <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="modal-content animate-zoom center transparent padding-64">
+    <img id="img01" class="image">
+    <p id="caption" class="opacity large"></p>
+  </div>
+</div>
+
+<!-- 3e image  Parallax avec texte du portfolio -->
+<div class="bgimg-3 display-container opacity-min">
+  <div class="display-middle">
+     <span class="xxlarge text-white wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Section Contact) -->
+<div class="content container padding-64" id="contact">
+  <h3 class="center">LIEU DE TRAVAIL</h3>
+  <p class="center"><em>Vive la campagne !</em></p>
+
+  <div class="row padding-32 section">
+    <div class="col m4 container">
+      <!-- Ajouter Google Maps -->
+      <div id="googleMap" class="round-large greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="col m8 panel">
+      <div class="large margin-bottom">
+        <i class="fa fa-map-marker fa-fw hover-text-black xlarge margin-right"></i> Aubeterre-sur-Dronne, FR<br>
+        <i class="fa fa-phone fa-fw hover-text-black xlarge margin-right"></i> Tel : 06 36 98 28 81<br>
+        <i class="fa fa-envelope fa-fw hover-text-black xlarge margin-right"></i> Email : prestat.roxane@gmail.com<br>
+      </div>
+      <p>Passez pour prendre une tasse de <i class="fa fa-coffee"></i>, ou bien laissez moi un mot :</p>
+      <form action="mailto:prestat.roxane@gmail.com" enctype="text/plain" target="_blank">
+        <div class="row-padding" style="margin:0 -16px 8px -16px">
+          <div class="half">
+            <input class="input border" type="text" placeholder="Nom" required name="Name">
+          </div>
+          <div class="half">
+            <input class="input border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="input border" type="text" placeholder="Message" required name="Message">
+        <button class="button black right section" type="submit">
+          <i class="fa fa-paper-plane"></i> Envoyer un message
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center padding-64 black opacity-min ">
+  <div class="xlarge section">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-github hover-opacity"></i>
+    <i class="fa fa-viadeo hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+  </div>
+  <p>Une mort certaine, une faible chance de succès... Mais qu'attendons-nous ?</p>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+					var page = $(this).attr('href'); // Page cible
+					var speed = 750; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+					return false;
+				});
+			});
+		</script>
+<!-- Ajouter Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(45.266642, 0.170395);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: true, draggable: true,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Gallerie d'image modal
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Changer le style de la navbar en scrollant
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "bar" + " card" + " animate-top" + " white";
+    } else {
+        navbar.className = navbar.className.replace(" card animate-top white", "");
+    }
+}
+
+
+// Utilisé pour basculer le menu sur les petits écrans lorsque l'on clic sur les boutons du menu
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else {
+        x.className = x.className.replace(" show", "");
+    }
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTKEBVhxILUWppTejFI3mQcKG62pZ28pg&callback=myMap"></script>
+
+
+</body>
 </html>
